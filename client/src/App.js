@@ -4,8 +4,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Auth from './components/Auth/Auth';
 import { gapi } from 'gapi-script';
-import Home from './components/Home/Home';
 
+import Home from "./pages/home/Home";
+import UserList from "./pages/userList/UserList";
+import User from "./pages/user/User";
+import NewUser from "./pages/newUser/NewUser";
+import PrivateRoute from "./components/PrivateRoute";
 
 const App = () => {
 
@@ -24,9 +28,13 @@ const App = () => {
     <BrowserRouter>
       <Container maxWidth="lg">
         <Routes>
-          <Route path="/" exact element={<Auth />} />
-          <Route path="/Home" exact element={<Home />} />        
+          <Route path="/" exact element={<Auth />} /> 
+          <Route path="/Home" exact element={<Home />} />    
+          <Route path="/users" element={<UserList />} exact/>
+          <Route path="/user/:userId" element={<User />} exact/>
+          <Route path="/newUser" element={<NewUser />} exact/>   
         </Routes>
+          
       </Container>
     </BrowserRouter>
   );
