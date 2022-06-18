@@ -1,0 +1,43 @@
+.card {
+    width: 30%;
+    display:flex;
+    flex-direction: column;
+    border:1px solid;
+    align-content:center ;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.card-header{
+    height: 30%;
+    background-color: lightblue;
+    text-align: center;
+}
+
+
+.card-header p{
+    font-size: 20px;
+}
+
+.container{
+    padding: 20px;
+    margin-left: 35px;
+}
+button{ 
+    border:none;
+    color: white;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    float: left;
+    background-color: rgb(26, 134, 153);
+}
+
+button:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(38, 143, 143);
+}
