@@ -52,7 +52,8 @@ const Addedit = () => {
             setState({...state, [name]: value})
          }
 
-         const {id} = useParams();
+        
+        const {id} = useParams();
 
          useEffect(()=>{
             fireDb.child('dues').on('value',(snapshot) => {
@@ -87,7 +88,10 @@ const Addedit = () => {
           <input type='text' id='name' name="name" placeholder='Name' onChange={handleInputChange} value = {name || ""}/>
           <input type='text' id='description' name="description" placeholder='Description' onChange={handleInputChange} value = {description || ""} />
           <input type='number' id='amount' name="amount" placeholder='Amount' onChange={handleInputChange} value = {amount || ""}/>
-          <input type='text' id='status' name="status" placeholder='Status' onChange={handleInputChange} value = {status || ""}/>
+          <select name = "status" onChange={handleInputChange}>
+            <option value = "Pending">Pending</option>
+            <option value = "Paid" >Paid</option>
+          </select>
         <input className = "submit" value={id ? "Update": "Submit"} type="submit"/>
         <Link to = "/">
         <input className = "back" type="submit" value = "Back"/>

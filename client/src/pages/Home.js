@@ -4,7 +4,7 @@ import "./Home.css";
 import fireDb from '../firebase.js';
 import { toast } from 'react-toastify';
 import Header from "../components/Header"
-
+import noData from "./noData.png";
 
 const Home = () => {
     const [data, setData] = useState({});
@@ -38,7 +38,26 @@ const onDelete = (id) => {
   return (
     <div>
         <div style={{marginTop: "150px"}}>  
-            <Header />      
+            <Header />    
+            {Object.keys(data).length === 0 ? (
+                <>
+                    <table className='styled-table'>
+                    <thead>
+                    <tr>
+                       <th style={{textAlign: "center"}}>ID</th>
+                       <th style={{textAlign: "center"}}>NAME</th>
+                       <th style={{textAlign: "center"}}>DESCRIPTION</th>
+                       <th style={{textAlign: "center"}}>AMOUNT</th>
+                       <th style={{textAlign: "center"}}>STATUS</th>
+                       <th style={{textAlign: "center"}}>ACTION</th>
+                    </tr>
+                </thead>
+                    </table>
+                    <img src = {noData}/>
+                    <h1 style={{color: "lightgray"}}>No Data Available.</h1>
+                    
+                </>
+            ) : (  
             <table className='styled-table'>
                 <thead>
                     <tr>
@@ -52,18 +71,19 @@ const onDelete = (id) => {
                 </thead>
                 <tbody>
                       {Object.keys(data).map((id, index) =>{
-                            return (
+                            return (     
                          <tr>      
                             <th scope = "row">{index + 1}</th>
                             <td>{data[id].name}</td>
                             <td>{data[id].description}</td>
                             <td>{data[id].amount}</td>
-                            <td>{data[id].status}</td>
-                            <td>
+                            <td style={{fontWeight:"bold"}}>{data[id].status}</td>
+                            <td>                               
                                 <Link to = {`/update/${id}`}><button className='btn btn-edit'>Edit</button></Link>
                                 <button className='btn btn-delete' onClick={() => onDelete(id)}>Delete</button>
                                 <Link to ={`/view/${id}`}><button className='btn btn-view'>View</button></Link>
-                        </td>
+                                
+                            </td>
                         </tr> 
                         )
 
@@ -73,9 +93,8 @@ const onDelete = (id) => {
                 </tbody>
 
             </table>
-
-        </div>
-
+            )}
+        </div>           
     </div>
   )
 }

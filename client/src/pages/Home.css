@@ -8,13 +8,20 @@
     max-width: 1000px;
     box-shadow: 0 0 20 rgba(0, 0, 0, 0.15);
     height: 20px;
-    align-items: center;
+    text-align: center;
+}
+img{
+    height: 250px;
+    width: 250px;
+    margin-left: auto;
+    margin-right:auto;
+    display: block;
 }
 
 .styled-table thead tr{
     background-color: #47acdbde;
     color: white;
-    text-align: left;
+
 }
 
 .styled-table th,
@@ -44,11 +51,13 @@
     display: inline-block;
     border-radius: 5px;
     font-size: 15px;
-    margin: 4px 2px;
+    margin-left: 10px;
     cursor: pointer;
 }
 
+
 .btn-edit{
+    margin-left: 25px;
     background-color: rgb(180, 175, 97);
 }
 
@@ -59,6 +68,8 @@
 .btn-view{
     background-color: #9ed9db;
     color: black;
+   
+    margin-right: -70px;
 }
 
 @media screen and (max-width: 500px) {
@@ -69,5 +80,14 @@
     font-family: sans-serif;
     max-width: 500px;
     box-shadow: 0 0 20 rgba(0, 0, 0, 0.15);
+    }
+    .btn-edit{
+        margin-left: 0;
+    }
+    .btn{
+        margin-left: 0;
+    }
+    .btn-view{
+        margin-right: 0;
     }
 }
