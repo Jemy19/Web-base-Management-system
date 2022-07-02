@@ -1,0 +1,84 @@
+select{
+    width: 100%;
+    padding: 6px;
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    margin-bottom: 20px;
+}
+.transaction {
+    width: 80%;
+    display: flex;  
+}
+
+.transactionContainer {
+    flex: 6;
+}
+
+.top, .transactioncontainer {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 10px;
+      margin: 20px;
+      display: flex;
+}
+.transactioncontainer {
+    width: 30%;
+    align-items: center;
+    text-align: center;
+    margin-left: 500px;
+    margin-top: 100px;
+    padding: 20px;
+}
+h1 {
+    color: lightgray;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+
+.transactionInput {
+    width: 100%;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+
+.input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid gray;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      border-radius: 5px;
+}
+
+.transactionbutton {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    color: white;
+    background-color: rgb(65, 128, 223);
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button:disabled{
+    background-color: rgb(64, 115, 150);
+}
