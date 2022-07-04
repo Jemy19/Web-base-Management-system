@@ -3,11 +3,14 @@ import './Newdues.css'
 import { setDoc, doc, collection, addDoc, Timestamp, serverTimestamp } from "firebase/firestore";
 import {auth, db, storage} from '../../firebase'
 import { v4 as uuid } from 'uuid';
+import { useNavigate } from 'react-router-dom'
+
 
 function Newdues({inputs, title}) {
 
     const [data,setData] = useState({})
     const dueid = uuid();
+    const navigate = useNavigate()
 
 
     const handleAdd = async (e) => {
@@ -18,7 +21,7 @@ function Newdues({inputs, title}) {
             ...data,
             timeStamp: serverTimestamp(),
           })
-
+          navigate('/duelist')
       };
 
     const handleInput = (e) =>{

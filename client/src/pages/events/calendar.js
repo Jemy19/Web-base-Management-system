@@ -16,7 +16,8 @@ function Calendar({title}) {
                 return{
                     title: doc.get('title'),
                     start: doc.get('start').toDate(),
-                    allDay: doc.get('allDay')
+                    allDay: doc.get('allDay'),
+                    timeStamp: serverTimestamp(),
                 }
             })
             setData([...array])
@@ -30,7 +31,8 @@ function Calendar({title}) {
                 const event = {
                     title:title ? title : e.dateStr,
                     start: e.date,
-                    allDay:true
+                    allDay:true,
+                    timeStamp: serverTimestamp(),
                 }
             addDoc(collection(db, "events"), event)
         }

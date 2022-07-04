@@ -1,0 +1,20 @@
+.record {
+    display: flex;
+  }
+
+
+  .recordcard{
+    padding: 20px;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    flex-basis: 300px;
+    margin: 20px;
+    align-content: center;
+    border-radius: 20px;
+  }
+
+  .recordimg{
+    width: 200px;
+    height: 100px;
+    margin: 24px;
+  }

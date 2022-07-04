@@ -8,3 +8,9 @@
     margin: 20px;
     margin-top: -40px;
 }
+
+.widgets{
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+    }

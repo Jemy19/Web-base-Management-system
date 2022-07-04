@@ -91,3 +91,16 @@ export const userInputs = [
 
 
   ]
+
+  export const recordInputs = [
+    {
+      id: "location",
+      label: "Location",
+      type: "text"
+    },
+    {
+      id: "date",
+      label: "Date",
+      type: "date"
+    },
+  ]

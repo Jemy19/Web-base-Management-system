@@ -10,12 +10,19 @@ import { userData } from "../../dummydata.js";
 function Home() {
   
     return (
+      
     <div className="home">
-      <FeaturedInfo />
+      <div className = "widgets">
+        <FeaturedInfo type = 'user'/>
+        <FeaturedInfo type = 'event'/>
+        <FeaturedInfo type = 'report'/> 
+      </div>
       <Chart data={ userData } title="Payment Analytics" grid dataKey="Paid" dataKey2="Pending"/>
+  
       <div className="homeWidgets">
       <Userhome/>
       <Transactionhome />
+
       </div>
     </div>
 

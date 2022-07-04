@@ -3,7 +3,7 @@ import Attachment from "./svg/Attachment";
 
 const MessageForm = ({ handleSubmit, text, setText, setImg }) => {
   return (
-    <form style={{marginBottom:"80px"}}className="message_form" onSubmit={handleSubmit}>
+    <form style={{marginBottom:"80px"}} className="message_form" onSubmit={handleSubmit}>
       <label htmlFor="img">
         <Attachment />
       </label>

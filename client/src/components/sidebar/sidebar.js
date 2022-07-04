@@ -2,7 +2,7 @@ import React,{ useState, useEffect} from 'react'
 import "./sidebar.css"
 import { LineStyle, Timeline, TrendingUp, PermIdentity,
 AttachMoney, BarChart, MailOutline, DynamicFeed,
-ChatBubbleOutline, WorkOutline, Report } from "@material-ui/icons"
+ChatBubbleOutline, WorkOutline, Report,Home, Group, GroupAdd, Event, Description } from "@material-ui/icons"
 import { Link,useLocation } from "react-router-dom";
 
 function Sidebar() {
@@ -53,6 +53,7 @@ function Sidebar() {
           <ul className="sidebarList">
             <Link to="/" style={{textDecoration:"none"}}>
             <li className = {`${activeTab === "Home" ? "active" : ""} sidebarListItem`} onClick = {() => setActiveTab("Home")}>
+            <Home className="sidebarIcon" />
               Home 
             </li>
             </Link>
@@ -70,13 +71,13 @@ function Sidebar() {
             </Link>
             <Link to ="/manageusers" style={{textDecoration:"none"}}>
             <li className = {`${activeTab === "manageuser" ? "active" : ""} sidebarListItem`} onClick = {() => setActiveTab("manageuser")}>
-              <PermIdentity className="sidebarIcon" />
+              <Group className="sidebarIcon" />
               Manage Users
             </li>
             </Link>
             <Link to = "/newuser" style={{textDecoration:"none"}}>
             <li className = {`${activeTab === "newuser" ? "active" : ""} sidebarListItem`} onClick = {() => setActiveTab("newuser")}>
-              <PermIdentity className="sidebarIcon" />
+              <GroupAdd className="sidebarIcon" />
               Add Users
             </li>
             </Link>
@@ -110,25 +111,25 @@ function Sidebar() {
           <ul className="sidebarList">
             <li className = {`${activeTab === "invoice" ? "active" : ""} sidebarListItem`} onClick = {() => setActiveTab("invoice")}>
             <Link to ="/invoice" style={{textDecoration:"none"}}>
-              <MailOutline className="sidebarIcon" />
+              <Description className="sidebarIcon" />
               Invoice
             </Link>
             </li>
             <li className = {`${activeTab === "messages" ? "active" : ""} sidebarListItem`} onClick = {() => setActiveTab("messages")}>
             <Link to ="/messages" style={{textDecoration:"none"}}>
-              <Timeline className="sidebarIcon" />
+              <MailOutline className="sidebarIcon" />
               Messages
               </Link>
             </li>
             <li className="sidebarListItem">
-            <Link to ="/record" style={{textDecoration:"none"}}>
+            <Link to ="/reports" style={{textDecoration:"none"}}>
               <Report className="sidebarIcon" />
               Reports
             </Link>
             </li>
             <li className = {`${activeTab === "calendar" ? "active" : ""} sidebarListItem`} onClick = {() => setActiveTab("calendar")}>
             <Link to ="/calendar" style={{textDecoration:"none"}}>
-              <Timeline className="sidebarIcon" />
+              <Event className="sidebarIcon" />
               Events
             </Link>
             </li>
