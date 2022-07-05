@@ -1,0 +1,15 @@
+.topRight{
+    display: flex;
+    align-items: center;
+    padding-right: 25px;
+    justify-content: space-around
+    
+}
+
+.nicon{
+    padding-right: 15px;
+}
+
+.avatar{
+    padding-right: 15px;
+}
