@@ -1,0 +1,33 @@
+.new {
+    width: 80%;
+    display: flex;  
+}
+
+.newContainer {
+    flex: 6;
+}
+
+.top{
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 10px;
+      margin: 20px;
+      display: flex;
+}
+
+
+.popup{
+    height: 400px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    padding: 10px;
+}
+.popup-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px 0 15px;
+    border-bottom: 2px solid black;
+}
