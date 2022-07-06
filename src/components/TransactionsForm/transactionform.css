@@ -1,0 +1,6 @@
+#TransactionForm-container{
+    place-items: center center;
+}
+#TransactionForm-Form{
+    max-width: 330px;
+}
